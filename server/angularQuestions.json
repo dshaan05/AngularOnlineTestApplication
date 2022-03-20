@@ -1,0 +1,57 @@
+{
+   "data" :[
+        {   
+    
+    "questionId": 1,
+    "questionText": "Which Angular module is needed to use NgIf NgFor",
+    "options": [
+      { "optionValue": "1", "optionText": "BrowserModule." },
+      { "optionValue": "2", "optionText": "CommonModule." },
+      { "optionValue": "3", "optionText": "FormsModule." },
+      { "optionValue": "4", "optionText": "HttpClientModule." }
+    ],
+    "answer": "2",
+    "explanation": "CommonModule is the correct answer",
+    "selectedOption": ""
+  },
+  {
+    "questionId": 2,
+    "questionText": "How to install TypeScript transpiler?",
+    "options": [
+      { "optionValue": "1", "optionText": "using npm" },
+      { "optionValue": "2", "optionText": "using Visual Studio" },
+      { "optionValue": "3", "optionText": "Either using Visual Studio or npm" },
+      { "optionValue": "4", "optionText": "None of the above." }
+    ],
+    "answer": "3",
+    "explanation": "Either using Visual Studio or npm is the correct answer",
+    "selectedOption": ""
+  },
+  {
+    "questionId": 3,
+    "questionText": "What does the ngApp directive designates in the Angular application?",
+    "options": [
+      { "optionValue": "1", "optionText": "parent element." },
+      { "optionValue": "2", "optionText": "child element." },
+      { "optionValue": "3", "optionText": "sibling element." },
+      { "optionValue": "4", "optionText": "None of these." }
+    ],
+    "answer": "3",
+    "explanation": "None of these is the correct answer",
+    "selectedOption": ""
+  },
+  {
+    "questionId": 4,
+    "questionText": "Which decorator is applicable for component class coded using TypeScript?",
+    "options": [
+      { "optionValue": "1", "optionText": "@Component()" },
+      { "optionValue": "2", "optionText": "@component()" },
+      { "optionValue": "3", "optionText": "@Component" },
+      { "optionValue": "4", "optionText": "@component" }
+    ],
+    "answer": "1",
+    "explanation": "@Component() is the correct answer",
+    "selectedOption": ""
+  }
+]
+}

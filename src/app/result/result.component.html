@@ -1,0 +1,78 @@
+<mat-card>
+       <mat-card-content>
+      <section class="results">
+        <section class="statistics">
+          <h3>Result</h3>
+          <span>You scored {{ correctAnswersCount }} out of {{ totalQuestions }} questions correctly.</span>
+          <div class="quiz-feedback">
+            <div *ngIf="percentage >= 80">
+             <h3>Great job! </h3>
+            </div>
+            <div *ngIf="percentage >= 60 && percentage < 80">            
+              <h3>Not bad! </h3>
+            </div>
+            <div *ngIf="percentage < 60">
+              <h3>Try again! </h3>
+            </div>
+  
+            <span *ngIf="elapsedMinutes < 1">You scored {{ percentage }}% correctly (and quickly)!</span>
+            <span *ngIf="elapsedMinutes > 1">You scored {{ percentage }}% correct.</span>
+          </div>
+        </section>
+  
+        <section class="quizSummary">
+          <details>
+            <summary>Review Test</summary>
+            <accordion>             
+              <accordion-group #quizQuestion role="tab" *ngFor="let question of allQuestions">
+                <span accordion-heading class="accordion-heading">
+                  <span>
+                    <strong>Question #{{ question.questionId }}: </strong>  <em>{{ question.questionText }}</em>
+                  </span>
+                  <span class="badge badge-secondary float-right pull-right">
+                    <i class="fa" [ngClass]="{'fa-chevron-up': quizQuestion.isOpen, 'fa-chevron-down': !quizQuestion.isOpen}"></i>
+                  </span>
+                </span>
+  
+                <div class="quiz-summary-question">
+                  <div class="quiz-summary-field">
+                    <span>
+                      <span class="leader">Question #{{ question.questionId }}: </span>{{ question.questionText }}
+                    </span>
+                  </div>
+                  <div class="quiz-summary-field">
+                    <span>
+                      <span class="leader">Your Answer: </span>
+                      Option {{ question.selectedOption }} - {{ question.options[question.selectedOption - 1].optionText }}
+                      <mat-icon class="correct" *ngIf="question.answer === question.selectedOption">Correct</mat-icon>
+                      <mat-icon class="incorrect" *ngIf="question.answer !== question.selectedOption">Incorrect</mat-icon>
+                      <span *ngIf="question.selectedOption === ''"> (no answer provided)</span>
+                    </span>
+                  </div>
+                  <div class="quiz-summary-field">
+                    <span>
+                      <span class="leader">Correct Answer: </span>
+                      Option {{ question.answer }} - {{ question.options[question.answer - 1].optionText }}
+                    </span>
+                  </div>
+                  <div class="quiz-summary-field">
+                    <span>
+                      <span class="leader">Explanation: </span>
+                      Option {{ question.answer }} was correct because {{ question.explanation }}.
+                    </span>
+                  </div>
+                </div>
+              </accordion-group>
+            </accordion>
+          </details>
+        </section>
+      </section>
+  
+      <section class="return">
+        <mat-card-actions>
+          <a routerLink="/welcome" class="btn">Restart Quiz</a>        
+        </mat-card-actions>
+      </section>
+      </mat-card-content>
+  </mat-card>
+  

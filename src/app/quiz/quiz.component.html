@@ -1,0 +1,48 @@
+<div>    
+      <section class="scoreboard">
+        <div class="row">
+          <div id="score" class="score">Score 
+            <span class="scoreboard">
+              {{ correctAnswersCount }}/{{ totalQuestions }}
+            </span>
+          </div>
+         
+          <div class="time-left">
+            <span class="leader">Time</span>
+            <span class="scoreboard">
+              0:<span *ngIf="timeLeft < 10">0</span>{{ timeLeft }}
+            </span>
+          </div>
+        </div>
+      </section>
+</div>
+<div>
+  <section id="question" class="d-flex justify-content-center" *ngIf="question !== undefined"> {{ question.questionText }}</section>
+<div>
+      <app-review [question]="question"  class="d-flex justify-content-center"></app-review>
+      </div>
+      
+</div>
+      <div class="d-flex justify-content-center">
+                  <div class="nextQuestionNav" *ngIf="question && question.questionId !== totalQuestions">
+            <button id="Next" class="btn btn-primary"  type="button" [disabled]="disabled" (click)="navigateToNextQuestion()">
+              Next  
+            </button>
+          </div>
+          <div class="showScoreNav" *ngIf="question && question.questionId === totalQuestions">
+            <button type="button" (click)="navigateToResults()">
+              Show Your Score
+            </button>
+          </div>      
+            </div>
+  <div class="d-flex justify-content-center padding-top">
+      <section class="progress-bar">
+        <ngb-progressbar *ngIf="(progressValue >= 0 && progressValue <= 100) &&
+                                question && question.questionId <= totalQuestions"
+                         type="success" [striped]="true" [animated]="true" [value]="progressValue">
+          <strong>{{ progressValue }}%</strong>
+        </ngb-progressbar>
+      </section>
+</div>
+
+  

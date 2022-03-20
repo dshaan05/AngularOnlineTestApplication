@@ -1,0 +1,21 @@
+  
+  
+  mat-card-content p {
+    text-align: justify;
+    margin-top: -25px;
+  }
+  
+  mat-card-actions {
+    text-align: center;
+  
+    button {
+      margin-bottom: 10px !important;
+    }
+    button:hover {
+      border: 1px solid #007aff;
+    }
+  }
+  .font{
+    font-size: 30px;
+    padding: 20px;
+  }
