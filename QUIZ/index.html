@@ -1,0 +1,35 @@
+<html>
+
+<head>
+     <title>Quiz</title>
+      
+	 <script src = "js/index.js" type = "text/javascript"/></script>
+	 <script src = "js/data.js" type = "text/javascript"/></script>
+	 
+	 <link rel="stylesheet" href="css/index.css">
+	 
+</head>  
+
+<body onload="loadQuestion(0)">
+
+<div id="quizDiv">
+
+	<p>	Quiz </p>
+	<h3 id="question"></h3>
+
+	<input type="radio" id="radio1" name="options" value="1"> <span id="optText1"></span><br>
+	<input type="radio" id="radio2" name="options" value="2"> <span id="optText2"></span><br>
+	<input type="radio" id="radio3" name="options" value="3"> <span id="optText3"></span><br>
+	<input type="radio" id="radio4" name="options" value="4"> <span id="optText4"></span><br>
+
+	<div id="buttonDiv">		
+		<button type="button" onclick='onNext();' id="nextButton" value="Click Me">Next ></button>
+	</div>
+</div>
+
+<div id="scoreDiv">
+	<p id="scoreText"> ******************** Your score is : <span id="score"></span> ********************</p>
+</div>
+
+<body>
+</html>

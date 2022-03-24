@@ -1,0 +1,39 @@
+body {
+  background-color: green;
+  font-size: medium;
+  font-weight: 10px;
+}
+
+#quizDiv {
+  background-color: lightGreen;
+  border-radius: 25px;
+  margin: 50px;
+  padding: 15px;
+  height: 300px;
+}
+
+#scoreDiv {
+  color: white;
+  margin-right: 30px;
+  padding: 15px;
+}
+
+#nextButton {
+  background-color: green;
+  color: white;
+  float: right;
+  margin: 20px;
+}
+
+#buttonDiv {
+  margin-left: 110px; 
+}
+
+#scoreText {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  font-size: larger;
+  margin-top: -100px;
+}
+
